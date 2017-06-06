@@ -31,6 +31,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="102dp"
+            android:onClick="onClick"
             android:text='10"' />
 
         <Button
@@ -41,6 +42,7 @@
             android:layout_alignStart="@+id/levelone"
             android:layout_below="@+id/levelone"
             android:layout_marginTop="51dp"
+            android:onClick="onClick"
             android:text='30"' />
 
         <Button
@@ -51,6 +53,7 @@
             android:layout_alignStart="@+id/leveltwo"
             android:layout_below="@+id/leveltwo"
             android:layout_marginTop="51dp"
+            android:onClick="onClick"
             android:text='60"' />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
