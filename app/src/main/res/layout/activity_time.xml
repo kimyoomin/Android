@@ -6,12 +6,51 @@
     android:layout_height="match_parent"
     tools:context="com.example.me.speedtouchgame.TimeActivity">
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="back to menu"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="513dp" />
+    <RelativeLayout
+        android:layout_width="395dp"
+        android:layout_height="587dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="54dp"
+            android:layout_marginLeft="144dp"
+            android:layout_marginStart="144dp"
+            android:text="Back To Menu" />
+
+        <Button
+            android:id="@+id/levelone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="102dp"
+            android:text='10"' />
+
+        <Button
+            android:id="@+id/leveltwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/levelone"
+            android:layout_alignStart="@+id/levelone"
+            android:layout_below="@+id/levelone"
+            android:layout_marginTop="51dp"
+            android:text='30"' />
+
+        <Button
+            android:id="@+id/levelthree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/leveltwo"
+            android:layout_alignStart="@+id/leveltwo"
+            android:layout_below="@+id/leveltwo"
+            android:layout_marginTop="51dp"
+            android:text='60"' />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

@@ -29,12 +29,12 @@
             android:id="@+id/exitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/rankButton"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/rankButton"
-            android:layout_marginBottom="112dp"
+            android:layout_marginBottom="110dp"
             android:onClick="onClick"
-            android:text="EXIT" />
+            android:text="EXIT"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/rankButton"
+            android:layout_alignStart="@+id/rankButton" />
 
         <Button
             android:id="@+id/rankButton"
