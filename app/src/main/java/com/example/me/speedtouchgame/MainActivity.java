@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button startButton=(Button) findViewById(R.id.startButton);
         Button exitButton=(Button) findViewById(R.id.exitButton);
+        Button rank=(Button) findViewById(R.id.rankButton);
 
         startButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -28,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 finish();
+            }
+        });
+
+        rank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RankActivity.class);
+                startActivity(intent);
             }
         });
     }
