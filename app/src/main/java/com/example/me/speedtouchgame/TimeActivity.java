@@ -28,6 +28,7 @@ public class TimeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent=new Intent(getApplicationContext(),GameActivity.class);
+                intent.putExtra("double","one");
                 startActivity(intent);
             }
         });
@@ -36,6 +37,7 @@ public class TimeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent=new Intent(getApplicationContext(),GameActivity.class);
+                intent.putExtra("double","two");
                 startActivity(intent);
             }
         });
@@ -44,6 +46,7 @@ public class TimeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent=new Intent(getApplicationContext(),GameActivity.class);
+                intent.putExtra("double","three");
                 startActivity(intent);
             }
         });

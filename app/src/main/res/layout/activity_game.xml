@@ -10,12 +10,12 @@
         android:layout_width="395dp"
         android:layout_height="587dp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageButton
             android:id="@+id/pushButton"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:adjustViewBounds="false"
