@@ -15,10 +15,10 @@
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Back to Menu"
             android:layout_below="@+id/rankthree"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="97dp"
-            android:text="Back to Menu" />
+            android:layout_marginTop="28dp" />
 
         <Button
             android:id="@+id/ranktwo"
@@ -56,6 +56,14 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="39dp" />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/result"
+            android:layout_centerHorizontal="true"
+            android:text="clear Score" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

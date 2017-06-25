@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class RankingActivity extends AppCompatActivity {
 
@@ -47,6 +46,8 @@ public class RankingActivity extends AppCompatActivity {
         int score=intent.getIntExtra("score",0);
 
 
+
+
         if (time == 10) {
             if (score >= bestscore[0]) {
                 bestscore[0] = score;
@@ -65,9 +66,17 @@ public class RankingActivity extends AppCompatActivity {
         Button two=(Button) findViewById(R.id.ranktwo);
         Button three=(Button) findViewById(R.id.rankthree);
         Button exit=(Button) findViewById(R.id.backButton);
-        TextView ss=(TextView) findViewById(R.id.result);
+        Button clear=(Button) findViewById(R.id.clearButton);
 
-        ss.setText(Integer.toString(bestscore[0]));
+        clear.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                bestscore[0]=0;
+                bestscore[1]=0;
+                bestscore[2]=0;
+            }
+        });
+
 
         one.setOnClickListener(new View.OnClickListener() {
             @Override
