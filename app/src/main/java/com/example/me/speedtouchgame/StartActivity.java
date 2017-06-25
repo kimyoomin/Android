@@ -13,9 +13,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        final TextView three=(TextView) findViewById(R.id.three);
-        final TextView two=(TextView) findViewById(R.id.two);
-        final TextView one=(TextView) findViewById(R.id.one);
+
         final TextView start=(TextView) findViewById(R.id.start);
 
         CountDownTimer timer;
@@ -25,14 +23,9 @@ public class StartActivity extends AppCompatActivity {
 
 
 
-        timer=new CountDownTimer(3010,1000) {
+        timer=new CountDownTimer(1100,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                three.setText("3");
-                SystemClock.sleep(1000);
-                two.setText("2");
-                SystemClock.sleep(1000);
-                one.setText("1");
                 SystemClock.sleep(1000);
                 start.setText("start");
             }

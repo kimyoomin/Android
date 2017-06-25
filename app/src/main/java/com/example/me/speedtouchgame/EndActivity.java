@@ -16,7 +16,7 @@ public class EndActivity extends AppCompatActivity {
         Button gomenu=(Button) findViewById(R.id.menuButton);
         Intent intent=getIntent();
         final int c=intent.getIntExtra("count", 0);
-        final int playtime=intent.getIntExtra("playtime",0);
+        final long playtime=intent.getLongExtra("playtime",0);
         final TextView result=(TextView) findViewById(R.id.result);
 
         result.setText(Integer.toString(c));
@@ -33,13 +33,10 @@ public class EndActivity extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent1=new Intent(getApplicationContext(),SavingRankActivity.class);
-                Intent intent2=new Intent(getApplicationContext(),RankingActivity.class);
-                intent1.putExtra("score",c);
-                intent1.putExtra("level",playtime);
-                intent2.putExtra("score",c);
-                intent2.putExtra("level",playtime);
-                startActivity(intent1);
+                Intent intent=new Intent(getApplicationContext(),SavingRankActivity.class);
+                intent.putExtra("score",c);
+                intent.putExtra("time",playtime);
+                startActivity(intent);
                 finish();
             }
         });

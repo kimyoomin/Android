@@ -6,6 +6,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
     private int c=0;
@@ -29,7 +30,7 @@ public class GameActivity extends AppCompatActivity {
         }
 
         final ImageButton push=(ImageButton) findViewById(R.id.pushButton);
-        //final TextView result=(TextView) findViewById(R.id.count);
+        final TextView result=(TextView) findViewById(R.id.count);
 
         push.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -42,7 +43,7 @@ public class GameActivity extends AppCompatActivity {
         timer=new CountDownTimer(playtime*1000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-
+                result.setText(Long.toString(playtime));
             }
             @Override
             public void onFinish() {
