@@ -48,13 +48,13 @@ public class GameActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
 
             }
-
             @Override
             public void onFinish() {
                 Intent intent=new Intent(getApplicationContext(),EndActivity.class);
                 intent.putExtra("count",c);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.putExtra("playtime",playtime);
                 startActivity(intent);
+                finish();
             }
         }.start();
 

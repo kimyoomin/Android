@@ -30,6 +30,7 @@ public class TimeActivity extends AppCompatActivity {
                 Intent intent=new Intent(getApplicationContext(),GameActivity.class);
                 intent.putExtra("double","one");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -39,6 +40,7 @@ public class TimeActivity extends AppCompatActivity {
                 Intent intent=new Intent(getApplicationContext(),GameActivity.class);
                 intent.putExtra("double","two");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -48,6 +50,7 @@ public class TimeActivity extends AppCompatActivity {
                 Intent intent=new Intent(getApplicationContext(),GameActivity.class);
                 intent.putExtra("double","three");
                 startActivity(intent);
+                finish();
             }
         });
 
