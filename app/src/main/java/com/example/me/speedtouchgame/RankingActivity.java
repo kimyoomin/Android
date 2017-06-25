@@ -1,6 +1,7 @@
 package com.example.me.speedtouchgame;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -35,44 +36,30 @@ public class RankingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ranking);
 
         bestscore=new int[3];
+
+        SharedPreferences pref=getSharedPreferences("SaveState",0);
+        bestscore[0]=pref.getInt("bs1",0);
+        bestscore[1]=pref.getInt("bs2",0);
+        bestscore[2]=pref.getInt("bs3",0);
+
         Intent intent=getIntent();
         long time=intent.getLongExtra("time",0);
         int score=intent.getIntExtra("score",0);
 
-        if(savedInstanceState != null){
-            /*r1=savedInstanceState.getIntegerArrayList("r1");
-            r2=savedInstanceState.getIntegerArrayList("r2");
-            r3=savedInstanceState.getIntegerArrayList("r3");*/
-            bestscore=savedInstanceState.getIntArray("best");
-            if(time==10){
-                if(score>=bestscore[0]) {
-                    bestscore[0] = score;
-                }
-            }if(time==30){
-                if(score>=bestscore[1]) {
-                    bestscore[1] = score;
-                }
-            }if(time==60){
-                if(score>=bestscore[2]) {
-                    bestscore[2] = score;
-                }
-            }
-        }
 
-        if(time==10){
-            if(score>=bestscore[0]) {
+        if (time == 10) {
+            if (score >= bestscore[0]) {
                 bestscore[0] = score;
             }
-        }if(time==30){
-            if(score>=bestscore[1]) {
+        }else if (time == 30) {
+            if (score >= bestscore[1]) {
                 bestscore[1] = score;
             }
-        }if(time==60){
-            if(score>=bestscore[2]) {
+        }else if (time == 60) {
+            if (score >= bestscore[2]) {
                 bestscore[2] = score;
             }
         }
-
 
         Button one=(Button) findViewById(R.id.rankone);
         Button two=(Button) findViewById(R.id.ranktwo);
@@ -123,12 +110,14 @@ public class RankingActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState){
-        super.onSaveInstanceState(outState);
-        /*outState.putIntegerArrayList("r1",r1);
-        outState.putIntegerArrayList("r2",r2);
-        outState.putIntegerArrayList("r3",r3);*/
-        outState.putIntArray("best",bestscore);
+        protected void onPause(){
+        super.onPause();
+        SharedPreferences pref=getSharedPreferences("SaveState",0);
+        SharedPreferences.Editor edit=pref.edit();
+        edit.putInt("bs1",bestscore[0]);
+        edit.putInt("bs2",bestscore[1]);
+        edit.putInt("bs3",bestscore[2]);
+        edit.commit();
     }
 
 }
