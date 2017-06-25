@@ -1,9 +1,8 @@
 package com.example.me.speedtouchgame;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -35,8 +34,11 @@ public class EndActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent1=new Intent(getApplicationContext(),SavingRankActivity.class);
+                Intent intent2=new Intent(getApplicationContext(),RankingActivity.class);
                 intent1.putExtra("score",c);
                 intent1.putExtra("level",playtime);
+                intent2.putExtra("score",c);
+                intent2.putExtra("level",playtime);
                 startActivity(intent1);
                 finish();
             }
