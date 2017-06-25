@@ -26,7 +26,7 @@ public class StartActivity extends AppCompatActivity {
         timer=new CountDownTimer(1100,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                SystemClock.sleep(1000);
+                SystemClock.sleep(900);
                 start.setText("start");
             }
             @Override

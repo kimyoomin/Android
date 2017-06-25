@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class SavingRankActivity extends AppCompatActivity {
 
@@ -17,8 +16,6 @@ public class SavingRankActivity extends AppCompatActivity {
         Intent intent=getIntent();
         final int score=intent.getIntExtra("score", 0);
         final long level=intent.getLongExtra("time",0);
-        TextView s=(TextView) findViewById(R.id.time);
-        s.setText(Long.toString(level));
         Button ok=(Button) findViewById(R.id.okButton);
         Button no=(Button) findViewById(R.id.noButton);
 

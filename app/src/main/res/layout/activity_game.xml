@@ -22,13 +22,5 @@
             android:onClick="onClick"
             app:srcCompat="@drawable/buttonimage" />
 
-        <TextView
-            android:id="@+id/count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/pushButton"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="73dp" />
-
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

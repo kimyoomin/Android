@@ -16,9 +16,6 @@ public class RankListActivity extends AppCompatActivity {
         ArrayList<Integer> r=new ArrayList<Integer>();
 
         TextView rank1=(TextView) findViewById(R.id.textView1);
-        TextView rank2=(TextView) findViewById(R.id.textView2);
-        TextView rank3=(TextView) findViewById(R.id.textView3);
-        TextView rank4=(TextView) findViewById(R.id.textView4);
 
         Intent intent=getIntent();
         long time=intent.getLongExtra("time",0);
