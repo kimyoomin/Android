@@ -3,7 +3,6 @@ package com.example.me.speedtouchgame;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
@@ -23,10 +22,9 @@ public class StartActivity extends AppCompatActivity {
 
 
 
-        timer=new CountDownTimer(1100,1000) {
+        timer=new CountDownTimer(1500,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                SystemClock.sleep(900);
                 start.setText("start");
             }
             @Override
