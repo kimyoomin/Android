@@ -6,7 +6,6 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
     private int c=0;
@@ -20,7 +19,7 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         Intent intent=getIntent();
-        String s=intent.getStringExtra("double");
+        String s=intent.getStringExtra("playtime");
         if(s.equals("one")==true){
             playtime = 10;
         }else if(s.equals("two")==true){
@@ -30,7 +29,7 @@ public class GameActivity extends AppCompatActivity {
         }
 
         final ImageButton push=(ImageButton) findViewById(R.id.pushButton);
-        final TextView result=(TextView) findViewById(R.id.count);
+        //final TextView result=(TextView) findViewById(R.id.count);
 
         push.setOnClickListener(new View.OnClickListener(){
             @Override

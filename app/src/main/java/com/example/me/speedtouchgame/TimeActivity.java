@@ -1,8 +1,8 @@
 package com.example.me.speedtouchgame;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -27,7 +27,7 @@ public class TimeActivity extends AppCompatActivity {
         levelone.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(getApplicationContext(),GameActivity.class);
+                Intent intent=new Intent(getApplicationContext(),StartActivity.class);
                 intent.putExtra("double","one");
                 startActivity(intent);
                 finish();
@@ -37,7 +37,7 @@ public class TimeActivity extends AppCompatActivity {
         leveltwo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(getApplicationContext(),GameActivity.class);
+                Intent intent=new Intent(getApplicationContext(),StartActivity.class);
                 intent.putExtra("double","two");
                 startActivity(intent);
                 finish();
@@ -47,7 +47,7 @@ public class TimeActivity extends AppCompatActivity {
         levelthree.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(getApplicationContext(),GameActivity.class);
+                Intent intent=new Intent(getApplicationContext(),StartActivity.class);
                 intent.putExtra("double","three");
                 startActivity(intent);
                 finish();

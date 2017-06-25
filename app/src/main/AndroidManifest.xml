@@ -23,7 +23,8 @@
         <activity android:name=".GameActivity" />
         <activity android:name=".EndActivity" />
         <activity android:name=".SavingRankActivity" />
-        <activity android:name=".RankListActivity"></activity>
+        <activity android:name=".RankListActivity" />
+        <activity android:name=".StartActivity"></activity>
     </application>
 
 </manifest>

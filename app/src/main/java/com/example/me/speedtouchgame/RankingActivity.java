@@ -15,12 +15,12 @@ public class RankingActivity extends AppCompatActivity {
     ArrayList<Integer> r2=new ArrayList<Integer>();
     ArrayList<Integer> r3=new ArrayList<Integer>();
 
-    public void addrank(Rank r,ArrayList<Integer> s){
+    public void addrank(int score,ArrayList<Integer> s){
         for(int i=0;i<s.size();i++){
-            if(r.score>s.get(i)){
-                s.add(0,r.score);
-            }else if(s.get(i)>=r.score&&r.score>=s.get(i)){
-                s.add(i+1,r.score);
+            if(score>s.get(i)){
+                s.add(0,score);
+            }else if(s.get(i)>=score&&score>=s.get(i)){
+                s.add(i+1,score);
             }
         }
         while(s.size()>4){
@@ -43,16 +43,15 @@ public class RankingActivity extends AppCompatActivity {
         Intent intent=getIntent();
         int time=intent.getIntExtra("time",0);
         int score=intent.getIntExtra("score",0);
-        String s=intent.getStringExtra("name");
 
-        Rank r=new Rank(s,score);
+
 
         if(time==10){
-            addrank(r,r1);
+            addrank(score,r1);
         }if(time==30){
-            addrank(r,r2);
+            addrank(score,r2);
         }if(time==60){
-            addrank(r,r3);
+            addrank(score,r3);
         }
 
         Button one=(Button) findViewById(R.id.rankone);
